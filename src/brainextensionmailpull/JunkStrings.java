@@ -28,6 +28,8 @@ public class JunkStrings {
         arl.add("HOOK");
         arl.add("F*ck");        
         arl.add("F@ck");
+        arl.add("F#ck");
+        arl.add("F$ck");
         arl.add("F**ck");
         arl.add("€15.000???");
         arl.add("Diabetes Warning");
