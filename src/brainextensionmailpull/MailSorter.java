@@ -71,21 +71,6 @@ public class MailSorter {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-        // check mails in target folder
-        try {
-            Message foTargetCount[] = targetFolder.getMessages();
-
-            for (Message m : foTargetCount) {
-
-                subject = m.getSubject();
-                System.out.println("mail found in targetFolder. subject: " + subject);
-
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
     }
 
     private String getFromString(Message msg) {
