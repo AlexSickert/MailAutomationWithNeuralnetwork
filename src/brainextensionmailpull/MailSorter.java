@@ -22,6 +22,7 @@ public class MailSorter {
         String from;
         String to;
         String subject;
+        String fromToSubject = "";
         int coutner = 0;
         //Message[] msgArr;
         ArrayList<Message> arl = new ArrayList<Message>();
@@ -39,16 +40,18 @@ public class MailSorter {
                 from = getFromString(m);
                 to = getToString(m);
                 subject = m.getSubject();
+                
+                fromToSubject = from + " " + to + " " + subject;
 
                 //System.out.println(subject);
                 //String tst = "Fryday Afterwork at Tequila House Terrace";
-                if (subject != null) {
+                if (fromToSubject != null) {
                     for (String tst : tstsArl) {
                         //if(to.toLowerCase().contains("brain@") || to.toLowerCase().contains("bex@")){
 
-                        if (subject.toLowerCase().contains(tst.toLowerCase())) {
+                        if (fromToSubject.toLowerCase().contains(tst.toLowerCase())) {
 
-                            System.out.println("Junk mail found in sourceFolder. Mail no is " + coutner + " of " + foSourceCount.length  + " subject: " + subject);
+                            System.out.println("Junk mail found in sourceFolder. Mail no is " + coutner + " of " + foSourceCount.length  + " subject: " + fromToSubject);
 
                             arl.add(m);
 
@@ -101,7 +104,6 @@ public class MailSorter {
             e.printStackTrace();
         }
         return ret;
-
     }
 
     private String getToString(Message msg) {

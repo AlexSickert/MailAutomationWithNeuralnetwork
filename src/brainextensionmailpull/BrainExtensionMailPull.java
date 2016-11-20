@@ -33,6 +33,8 @@ public class BrainExtensionMailPull {
             ImapStratoJunk pullStrato = new ImapStratoJunk();
 
             while (true) {
+                System.out.println("---------------------------------");
+                printTime();
                 pullStrato.loopThroughFolders(config.getValue("email"), config.getValue("pass"));
                 sleep();
             }
@@ -40,7 +42,6 @@ public class BrainExtensionMailPull {
         } catch (Exception e) {
 
             e.printStackTrace();
-
             System.out.println(e.toString());
 
         }
@@ -48,14 +49,25 @@ public class BrainExtensionMailPull {
 
     private static void sleep() {
 
-        int i = 10000 * 60 * 60;
+        int i = 1000 * 60 * 20;
+
+        try {
+            printTime();
+            System.out.println("we go to sleep now for 20 minutes.");
+            Thread.sleep(i);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    private static void printTime() {
 
         try {
             DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
             Date date = new Date();
-            System.out.println(dateFormat.format(date));
-            System.out.println("we go to sleep now for 1 hour.");
-            Thread.sleep(i);
+            System.out.println("Current Time: " + dateFormat.format(date));
+
         } catch (Exception e) {
             e.printStackTrace();
         }

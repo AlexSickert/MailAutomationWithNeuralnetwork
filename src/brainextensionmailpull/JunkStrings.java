@@ -16,7 +16,7 @@ public class JunkStrings {
     public ArrayList<String> getStrings() {
 
         ArrayList<String> arl = new ArrayList<String>();
-        
+
         arl.add("buy our watches and get free shipping");
         arl.add("Limited Time Offer: Save");
         arl.add("Bank statements");
@@ -26,7 +26,8 @@ public class JunkStrings {
         arl.add("Proactiv targets acne better");
         arl.add("H00K");
         arl.add("HOOK");
-        arl.add("F*ck");        
+        arl.add("F*ck");
+        arl.add("h*rd");
         arl.add("F@ck");
         arl.add("F#ck");
         arl.add("F$ck");
