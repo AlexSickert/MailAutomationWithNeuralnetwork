@@ -48,7 +48,7 @@ public class MailSorter {
 
                         if (subject.toLowerCase().contains(tst.toLowerCase())) {
 
-                            System.out.println("Junk mail found in sourceFolder. subject: " + subject);
+                            System.out.println("Junk mail found in sourceFolder. Mail no is " + coutner + " of " + foSourceCount.length  + " subject: " + subject);
 
                             arl.add(m);
 
