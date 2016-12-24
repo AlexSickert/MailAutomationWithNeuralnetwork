@@ -22,7 +22,7 @@ import javax.mail.internet.MimeBodyPart;
 
 /**
  *
- * @author xandi
+ * @author xandi 
  */
 public class ImapPullBulkStrato {
 
